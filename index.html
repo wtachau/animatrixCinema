@@ -101,7 +101,7 @@ function initScene() {
 		// hide any elements on webpage
 		document.getElementById("info").style.visibility = "hidden";
 
-		var scale = new THREE.Vector3( 2, 2, 2);
+		var scale = new THREE.Vector3( 6, 6, 1);
 		cube.scale.copy( scale );
 		// or cube.scale.set( scale.x, scale.y, scale.z)
 		// note cube.scale = scale won't work, same for cube.position
@@ -200,8 +200,8 @@ function animate() {
 
 	cursorEvents.update();
 
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
+	// cube.rotation.x += 0.01;
+	// cube.rotation.y += 0.01;
 
 	renderer.render( scene, camera );
 

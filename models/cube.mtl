@@ -1,7 +1,7 @@
 newmtl default
 Kd 1 1 1
 illum 0
-map_Kd altspace-logo.jpg
+map_Kd animatrix.jpg
 
 # Note:
 # MTL files specify material color, texture, and reflection map only.
