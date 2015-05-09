@@ -10,19 +10,19 @@
 		<title>Spinning Cube Example</title>
 
 		<!-- Required by AltOBJMTLLoader.js -->
-		<script src="../lib/three.min.js"></script>
-		<script src="../lib/MTLLoader.js"></script>
-		<script src="../lib/OBJMTLLoader.js"></script>
-		<script src="../lib/firebase.js"></script>
+		<script src="./lib/three.min.js"></script>
+		<script src="./lib/MTLLoader.js"></script>
+		<script src="./lib/OBJMTLLoader.js"></script>
+		<script src="./lib/firebase.js"></script>
 
-		<script src="../src/AltOBJMTLLoader.js"></script>
-		<script src="../src/AltRenderer.js"></script>
-		<script src="../src/cursor/CursorEvents.js"></script>
-		<script src="../src/cursor/AltObjectControls.js"></script>
-		<script src="../src/sync/FirebaseSync.js"></script>
+		<script src="./src/AltOBJMTLLoader.js"></script>
+		<script src="./src/AltRenderer.js"></script>
+		<script src="./src/cursor/CursorEvents.js"></script>
+		<script src="./src/cursor/AltObjectControls.js"></script>
+		<script src="./src/sync/FirebaseSync.js"></script>
 
-		<script src="../src/cursor/ColorHoverEffect.js"></script>
-		<script src="../src/cursor/DragPlaneEffect.js"></script>
+		<script src="./src/cursor/ColorHoverEffect.js"></script>
+		<script src="./src/cursor/DragPlaneEffect.js"></script>
 
 		<style>
 			body {
@@ -79,7 +79,7 @@ function loadModels() {
 	var loader = new THREE.AltOBJMTLLoader();
 
 	// loader assumes .mtl file has same basename as .obj file
-	var filename = "models/AltspaceCube/cube.obj";
+	var filename = "models/cube.obj";
 	loader.load(filename, function ( loadedObject ) {
 
 		console.log("Loaded object from " + filename, loadedObject);
