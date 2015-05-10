@@ -101,14 +101,15 @@ function initScene() {
 		// hide any elements on webpage
 		document.getElementById("info").style.visibility = "hidden";
 
-		var scale = new THREE.Vector3( 6, 6, 1);
-		cube.scale.copy( scale );
-		// or cube.scale.set( scale.x, scale.y, scale.z)
-		// note cube.scale = scale won't work, same for cube.position
-		cube.position.y = 25; // off the ground
-
+		var scale = new THREE.Vector3( 20, 15, 1);
+		cube.scale.set( scale.x, scale.y, scale.z)
+		var position = new THREE.Vector3( 0, 100, 0);
+		cube.position.set( position.x, position.y, position.z )
+		var rotation = new THREE.Vector3( 0, 3.14/4, 0);
+		cube.rotation.set( rotation.x, rotation.y, rotation.z )
 	} else {
 
+        /*
 		renderer = new THREE.WebGLRenderer();
 		renderer.setClearColor("#AAAAAA");
 		renderer.setSize( window.innerWidth, window.innerHeight );
@@ -124,6 +125,7 @@ function initScene() {
 		// OBJMTLLoader always uses PhongMaterial, so we need light in scene.
 		var ambient = new THREE.AmbientLight( 0xffffff );
 		scene.add( ambient );
+        */
 	}
 
 	// Don't forget to add loaded model into the scene.
