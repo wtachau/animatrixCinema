@@ -101,11 +101,11 @@ function initScene() {
 		// hide any elements on webpage
 		document.getElementById("info").style.visibility = "hidden";
 
-		var scale = new THREE.Vector3( 20, 15, 1);
+		var scale = new THREE.Vector3( 8, 5, 0.1);
 		cube.scale.set( scale.x, scale.y, scale.z)
-		var position = new THREE.Vector3( 0, 100, 0);
+		var position = new THREE.Vector3( -200, 100, 0);
 		cube.position.set( position.x, position.y, position.z )
-		var rotation = new THREE.Vector3( 0, 3.14/4, 0);
+		var rotation = new THREE.Vector3(0, 3.14 / 2, 0);
 		cube.rotation.set( rotation.x, rotation.y, rotation.z )
 	} else {
 
@@ -145,12 +145,12 @@ function initEvents() {
 		if (!sound) loadSoundEffect();
 		sound.play();
 		this.position.y += 2;
-		firebaseSync.saveObject( this );	
+		//firebaseSync.saveObject( this );
 	});
 
 	cube.addEventListener( "holocursorup",  function( event ) {
 		this.position.y -= 2;
-		firebaseSync.saveObject( this );	
+		//firebaseSync.saveObject( this );
 	});
 
 	// In addition to defining event listeners, you can apply pre-made effects
@@ -167,12 +167,12 @@ function initEvents() {
 
 function initFirebase() {
 
-	var firebaseRootUrl = "https://altspace-apps.firebaseio.com/";
-	var appId = "spinning-cube";
-	firebaseSync = new FirebaseSync( firebaseRootUrl, appId );
-	firebaseSync.addObject( cube, "cube" );
+	//var firebaseRootUrl = "https://altspace-apps.firebaseio.com/";
+	//var appId = "spinning-cube";
+	///firebaseSync = new FirebaseSync( firebaseRootUrl, appId );
+	//firebaseSync.addObject( cube, "cube" );
 
-	firebaseSync.connect();
+	//firebaseSync.connect();
 
 }
 
